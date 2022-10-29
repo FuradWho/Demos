@@ -11,8 +11,8 @@
                 <el-menu-item index="4" @click="goAnchor('4')">Processing Center</el-menu-item>
             </el-menu>
         </el-header>
-        <el-main @scroll="onScroll" >
-            <div class="content" >
+        <el-main @scroll="onScroll">
+            <div class="content">
                 <div id="0">
                     content-0
                 </div>
@@ -113,7 +113,7 @@ export default {
         text-align: center;
         width: 100%;
         --el-header-padding: 0 0px;
-        z-index: 1000; 
+        z-index: 1000;
         background-color: white;
     }
 
@@ -131,7 +131,7 @@ export default {
         // text-align: center;
         // height: 1500px;
         height: 4220px;
-        overflow-y:auto;
+        overflow-y: auto;
     }
 }
 
@@ -160,5 +160,4 @@ export default {
     width: 150px;
     /* margin-left: 10px; */
 }
-
 </style>
