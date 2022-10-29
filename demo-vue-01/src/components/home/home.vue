@@ -46,6 +46,7 @@ export default {
         window.addEventListener('scroll', this.onScroll)
     },
     destroy() {
+
         window.removeEventListener('scroll', this.onScroll)
     },
     methods: {
@@ -100,7 +101,7 @@ export default {
     }
 
     .el-header {
-        // position: fixed;
+        position: fixed;
         text-align: center;
         width: 100%;
         --el-header-padding: 0 0px;
@@ -116,12 +117,13 @@ export default {
 
     .el-main {
         display: flex;
+        --el-main-padding: 50px 0px;
         // justify-content: center;
         background-color: var(--el-color-primary-light-9);
         color: var(--el-text-color-primary);
         // text-align: center;
         // height: 1500px;
-        height: 4220px;
+        height: 4420px;
         overflow-y: auto;
     }
 }
