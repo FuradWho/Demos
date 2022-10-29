@@ -6,7 +6,7 @@ import home from './components/home/home.vue'
   <home />
 </template>
 
-<style scoped>
+<style>
 body{
   margin: 0;
   padding: 0;

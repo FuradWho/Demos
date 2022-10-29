@@ -46,31 +46,22 @@ export default {
         window.addEventListener('scroll', this.onScroll)
     },
     destroy() {
-        // 必须移除监听器，不然当该vue组件被销毁了，监听器还在就会出错
         window.removeEventListener('scroll', this.onScroll)
     },
     methods: {
         onScroll() {
-            // 获取所有锚点元素
             const navContents = document.querySelectorAll('.content div')
-            // 所有锚点元素的 offsetTop
             const offsetTopArr = []
             navContents.forEach(item => {
                 offsetTopArr.push(item.offsetTop)
             })
-            // 获取当前文档流的 scrollTop
             const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-            // 定义当前点亮的导航下标
             let navIndex = 0
             for (let n = 0; n < offsetTopArr.length; n++) {
-                // 如果 scrollTop 大于等于第 n 个元素的 offsetTop 则说明 n-1 的内容已经完全不可见
-                // 那么此时导航索引就应该是 n 了
-                console.log(scrollTop, offsetTopArr[n])
                 if (scrollTop >= offsetTopArr[n]) {
                     navIndex = n
                 }
             }
-            // 把下标赋值给 vue 的 data
             this.activeIndex = navIndex
         },
         goAnchor(id) {
